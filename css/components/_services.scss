@@ -1,0 +1,36 @@
+
+.services .box-container{
+    @include grid(30rem);
+
+    .box{
+        background: $light-bg;
+        padding: 3rem;
+        text-align: center;
+        border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+
+        &:nth-child(even){
+            border-radius: 79% 21% 81% 19% / 58% 93% 7% 42%;
+        }
+
+        &:hover{
+            border-radius: .5rem;
+        }
+
+        i{
+            height: 6.5rem;
+            width: 6.5rem;
+            line-height: 6.5rem;
+            font-size: 3rem;
+            color: $white;
+            background: $carrot-color;
+            border-radius: 50%;
+            margin-bottom: .5rem;
+        }
+
+        h3{
+            font-size: 2.2rem;
+            color: $black;
+            padding: 1rem 0;
+        }
+    }
+}

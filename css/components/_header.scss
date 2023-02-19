@@ -1,0 +1,148 @@
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+
+@mixin form-btn {
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+        background: $black;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+}
+
+header {
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    box-shadow: $box-shadow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transform: translateY(-10rem);
+
+    &.active {
+        transform: translateY(0);
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        color: $black;
+        font-weight: bolder;
+
+        i {
+            color: $carrot-color;
+        }
+    }
+
+    .navbar a {
+        margin: 0 1rem;
+        font-size: 1.7rem;
+        color: $light-color;
+
+        &:hover {
+            color: $carrot-color;
+        }
+    }
+
+    .icons a, .icons div {
+        font-size: 2.5rem;
+        margin-left: 1.5rem;
+        color: $black;
+        cursor: pointer;
+
+        &:hover {
+            color: $carrot-color;
+        }
+    }
+
+    .login-form {
+        position: absolute;
+        top: 120%;
+        right: 2rem;
+        width: 35rem;
+        border-radius: 1rem;
+        background: $white;
+        box-shadow: $box-shadow;
+        padding: 2rem;
+        display: none;
+
+        &.active {
+            display: block;
+            animation: fadeIn .4s linear;
+        }
+
+        h3 {
+            color: $black;
+            font-size: 2.5rem;
+            padding-bottom: .5rem;
+        }
+
+        .box {
+            width: 100%;
+            border-bottom: $border;
+            border-width: .1rem;
+            padding: 1.5rem 0;
+            font-size: 1.6rem;
+            color: $black;
+            text-transform: none;
+            margin: 1rem;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            padding: 1rem 0;
+
+            label {
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: $light-color;
+
+            }
+        }
+
+        .btn{
+            @include form-btn();
+            margin: 1.5rem 0;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+
+            a{
+                font-size: 1.4rem;
+                color: $carrot-color;
+
+                &:hover {
+                    color: $black;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+#menu-btn {
+    display: none;
+}
+
+

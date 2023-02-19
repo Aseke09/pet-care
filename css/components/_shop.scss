@@ -1,0 +1,78 @@
+
+.shop .box-container{
+    @include grid(30rem);
+
+    .box{
+        position: relative;
+        overflow: hidden;
+
+        &:hover{
+
+            .image img{
+                transform: scale(1.1);
+            }
+
+            .icons{
+                transform: translateX(0);
+            }
+        }
+
+
+        .image{
+            height: 45rem;
+            width: 100%;
+            overflow: hidden;
+
+            
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .icons{
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            z-index: 10;
+            transform: translateX(10rem);
+
+            a{
+                display: block;
+                width: 5rem;
+                height: 5rem;
+                line-height: 5rem;
+                font-size: 2.2rem;
+                margin-top: 1rem;
+                background: $white;
+                color: $black;
+                text-align: center;
+
+                &:hover{
+                    color: $white;
+                    background: $carrot-color;
+                }
+            }
+
+            
+        }
+
+        .content{
+            padding: 1rem 0;
+            text-align: center;
+
+            h3{
+                font-size: 2.2rem;
+                color: $black;
+                padding-bottom: .5rem;
+            }
+
+            .amount{
+                font-size: 2rem;
+                color: $carrot-color;
+            }
+        }
+    }
+}
