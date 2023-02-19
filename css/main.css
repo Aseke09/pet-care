@@ -120,7 +120,7 @@ header .login-form .links a:hover {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background: url("./../../image/home_bg_img.jpg");
+  background: url("../image/home_bg_img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -492,7 +492,7 @@ header .login-form .links a:hover {
 
 .footer {
   position: relative;
-  background: url("../../image/footer_background.jpg") no-repeat;
+  background: url("../image/footer_background.jpg") no-repeat;
   background-position: center;
   background-size: center;
   padding-top: 10rem;
